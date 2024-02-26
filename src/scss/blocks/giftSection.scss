@@ -1,0 +1,111 @@
+.teamSection {
+  overflow: hidden;
+}
+.gift-inner {
+  position: relative;
+  z-index: 100;
+  border-radius: 40px;
+  background-color: #028dfa;
+  margin-bottom: 170px;
+  @include tablet {
+    margin-bottom: 70px;
+  }
+}
+.giftBg {
+  position: absolute;
+  width: 796px;
+  top: -84px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  @include mobile-s {
+    top: -25px;
+  }
+}
+.giftHart1,
+.giftHart2,
+.giftHart3 {
+  position: absolute;
+  z-index: -1;
+}
+.giftHart1 {
+  top: 48px;
+  right: 82px;
+  @include tablet {
+    top: 13px;
+  }
+  @include mobile-s {
+    top: -50px;
+    right: 10px;
+  }
+}
+.giftHart2 {
+  top: 140px;
+  right: 190px;
+  @include tablet {
+    top: 13px;
+    right: 0;
+    left: 45px;
+  }
+  @include mobile-s {
+    top: -50px;
+    left: 25px;
+  }
+}
+.giftHart3 {
+  top: 190px;
+  right: 122px;
+  @include tablet {
+    top: 13px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  @include mobile-s {
+    top: -50px;
+  }
+}
+.gift-leterA,
+.gift-leterB,
+.gift-leterC {
+  position: absolute;
+  font-size: 120px;
+  font-weight: 700;
+  color: rgb(255, 255, 255, 0.6);
+  @include tablet {
+    display: none;
+  }
+}
+.gift-leterA {
+  top: 20px;
+  left: 105px;
+  rotate: -22deg;
+}
+.gift-leterB {
+  top: 127px;
+  left: 39px;
+  rotate: 10deg;
+}
+.gift-leterC {
+  top: 247px;
+  left: 110px;
+  rotate: 22deg;
+}
+.gift-title {
+  max-width: 100%;
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 20px;
+}
+.gift__text {
+  text-align: center;
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.gift__button {
+  display: block;
+  padding: 26px 30px;
+  min-width: 360px;
+  margin: 0 auto;
+}

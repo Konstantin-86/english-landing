@@ -1,0 +1,44 @@
+.none {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+.button {
+  padding: 26px 32px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--whiteColor);
+  text-transform: uppercase;
+  font-family: var(--font-accent);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  @include hover {
+    background-color: var(--whiteColor);
+    color: var(--accent);
+  }
+  @include tablet {
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 7px;
+  }
+}
