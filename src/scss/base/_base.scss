@@ -1,9 +1,107 @@
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	background-color: var(--page-bg);
-	color: var(--text-color);
-    font-family: var(--font-main);
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  transform: perspective(1000px) rotateX(90deg);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.modal--active {
+  visibility: visible;
+  opacity: 1;
+  transform: perspective(1000px) rotateX(0deg);
+  overflow: hidden;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  /* margin: 15% auto; */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 90%;
+  max-width: 600px;
+  min-height: 50dvh;
+}
+.close-modal {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.modal-content__title {
+  width: 100%;
+  text-align: center;
+  padding-top: 0;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-block: 10px;
+
+  input,
+  textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    font-family: var(--font-accent);
+
+    &:focus {
+      border: 1px solid transparent;
+      outline: 2px solid #521a999e;
+    }
+  }
+  textarea {
+    height: 150px;
+    overflow: auto;
+  }
+  .modal-button {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    color: #fff;
+    background-color: var(--accent);
+    transition: all 0.2s;
+    @include hover {
+      background-color: #7034bc;
+      box-shadow: 2px 3px 11px 4px rgba(34, 60, 80, 0.2);
+    }
+  }
 }

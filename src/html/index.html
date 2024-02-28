@@ -6,13 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Стартовый шаблон</title>
     <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h3 class="modal-content__title title">Заявка</h3>
+        <p class="close-modal">X</p>
+        <form id="form" class="modal-form">
+          <input class="input-name" type="text" placeholder="Имя *" />
+          <input class="input-phone" type="tel" placeholder="Телефон *" />
+          <input class="input-email" type="email" placeholder="E-mail *" />
+          <textarea
+            class="input-message"
+            placeholder="Ваши пожелания"
+          ></textarea>
+          <button class="modal-button">Отправить</button>
+        </form>
+      </div>
+    </div>
     @@include('blocks/header.html') @@include('blocks/secondSection.html')
     @@include('blocks/thirdSectioon.html')
     @@include('blocks/resultSection.html') @@include('blocks/ageSection.html')
     @@include('blocks/AdditionalSection.html')
     @@include('blocks/giftSection.html') @@include('blocks/teamSection.html')
+    @@include('blocks/questionSection.html')
     <script src="./js/index.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

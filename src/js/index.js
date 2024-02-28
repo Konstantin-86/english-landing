@@ -5,6 +5,43 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+///////////modal
+const modal = document.querySelector("#myModal");
+const closeModal = document.querySelector(".close-modal");
+const modalOpenButton = document.querySelectorAll(".button");
+const submitButton = document.querySelector(".modal-button");
+
+const inputName = document.querySelector(".input-name");
+
+const body = document.querySelector("body");
+const form = document.getElementById("form");
+
+modalOpenButton.forEach((el) => {
+  el.addEventListener("click", () => {
+    modal.classList.add("modal--active");
+    body.style.overflow = "hidden";
+  });
+});
+
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("modal--active");
+  body.style.overflow = "auto";
+});
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.classList.remove("modal--active");
+    body.style.overflow = "auto";
+  }
+};
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (inputName.value.length === 0) return alert("Заполните поле");
+  if (inputName.value.length <= 2) {
+    return alert("Имя должно быть не менее 3-х символов");
+  }
+});
+
 gsap.from(".header-content__item", {
   y: 100,
   opacity: 0.2,
@@ -79,20 +116,29 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".mySlider", {
   modules: [Navigation],
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 20,
-  /*  breakpoints: {
-    767: {
+  breakpoints: {
+    480: {
       slidesPerView: 2,
       spaceBetween: 15,
     },
-    1023: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+
+    1200: {
       slidesPerView: 3,
       spaceBetween: 20,
     },
-  }, */
+  },
   navigation: {
     nextEl: ".mySlider__nextBtn",
     prevEl: ".mySlider__prevBtn",
