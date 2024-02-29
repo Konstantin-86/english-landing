@@ -1,26 +1,106 @@
 .question-accordion {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.questionSection__title {
+  color: #d9d0ff;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 100% !important;
 }
 .accordion-item {
   max-width: 960px;
   width: 100%;
   border-radius: 10px;
+  background-color: #d9d0ff;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.accordion-item__questionInner {
+  padding-inline: 30px 10px;
+  padding-block: 16px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 30px 10px;
-  padding-block: 16px;
-  background-color: #d9d0ff;
+  &.active {
+    margin-bottom: 15px;
+    background-color: #b9abf7;
+  }
+  @include mobile-s {
+    padding-inline: 15px 10px;
+    padding-block: 10px;
+    font-size: 16px;
+  }
 }
-.accordion-item__text {
-  font-family: var(--font-accent);
-  font-size: 18px;
-  font-weight: 400;
+.accordion-item-description {
+  cursor: auto;
+  line-height: 120%;
+  height: 0;
+  /* transition: all 0.4s ease-out; */
+  visibility: hidden;
+  opacity: 0;
+  &.active {
+    height: 100%;
+    padding-inline: 30px 10px;
+    padding-block: 16px;
+    transition: all 0.3s ease-out;
+    visibility: visible;
+    opacity: 1;
+    @include mobile-s {
+      padding-inline: 15px 10px;
+      padding-block: 10px;
+      font-size: 16px;
+    }
+  }
+}
+
+.accordion-item__title {
+  p {
+    font-family: var(--font-accent);
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 700px;
+    line-height: 140%;
+    @include tablet {
+      max-width: 500px;
+    }
+    @include mobile {
+      max-width: 300px;
+    }
+    @include mobile-s {
+      max-width: 250px;
+    }
+  }
 }
 .accordion-item__icon {
+  position: relative;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: var(--accent);
+  transition: all 0.2s ease-in;
+  .icon__line1,
+  .icon__line2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+  }
+  .icon__line1 {
+    width: 25px;
+    height: 2px;
+  }
+  .icon__line2 {
+    width: 2px;
+    height: 25px;
+  }
+  &.active {
+    rotate: 45deg;
+  }
 }

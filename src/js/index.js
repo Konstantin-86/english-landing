@@ -42,6 +42,20 @@ submitButton.addEventListener("click", (e) => {
   }
 });
 
+////accordion
+
+const accordion = document.querySelectorAll(".accordion-item__questionInner");
+
+accordion.forEach((el) => {
+  el.addEventListener("click", () => {
+    el.childNodes[3].classList.toggle("active");
+    el.classList.toggle("active");
+    el.nextElementSibling.classList.toggle("active");
+  });
+});
+
+//////////gsap animations
+
 gsap.from(".header-content__item", {
   y: 100,
   opacity: 0.2,
