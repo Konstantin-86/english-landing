@@ -5,6 +5,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+const body = document.querySelector("body");
+
+/////////burger
+
+const list = document.querySelector(".main-nav-list");
+const burger = document.querySelector(".burger");
+
+burger.addEventListener("click", () => {
+  list.classList.toggle("active");
+  burger.classList.toggle("active");
+});
+
+/////////// scrollToTop
+
+const scrollToTop = document.querySelector("#scrollToTop");
+scrollToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+  });
+});
+
 ///////////modal
 const modal = document.querySelector("#myModal");
 const closeModal = document.querySelector(".close-modal");
@@ -13,7 +34,6 @@ const submitButton = document.querySelector(".modal-button");
 
 const inputName = document.querySelector(".input-name");
 
-const body = document.querySelector("body");
 const form = document.getElementById("form");
 
 modalOpenButton.forEach((el) => {

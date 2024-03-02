@@ -104,3 +104,86 @@
     rotate: 45deg;
   }
 }
+
+/////////contacts
+
+.contact {
+  margin-top: 130px;
+  margin-bottom: 40px;
+  max-width: 100% !important;
+  @include mobile-s {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+}
+.main-title {
+}
+.contact-inner {
+  display: flex;
+  @include tablet {
+    flex-wrap: wrap;
+  }
+}
+.yand-map {
+  width: 50%;
+  @include tablet {
+    width: 80%;
+    margin: 0 auto;
+  }
+  @include mobile-s {
+    width: 100%;
+  }
+}
+.contact-block {
+  width: 50%;
+  position: relative;
+  padding-top: 70px;
+  padding-left: 30px;
+  @include tablet {
+    width: 100%;
+    order: -1;
+    margin: 0 auto;
+    text-align: center;
+  }
+  @include mobile-s {
+    padding-top: 50px;
+  }
+  p {
+    font-family: var(--font-accent);
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    a {
+      display: inline-block;
+      color: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      border-bottom: 1px solid transparent;
+      @include hover {
+        color: var(--accent);
+        border-bottom: 1px solid var(--accent);
+      }
+    }
+    strong {
+      display: block;
+      font-weight: 600;
+    }
+  }
+  img {
+    position: absolute;
+    top: -170px;
+    left: -200px;
+    z-index: -1;
+    width: 700px;
+    max-width: none;
+    @include tablet {
+      width: 100%;
+      max-width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @include mobile-s {
+      display: none;
+    }
+  }
+}

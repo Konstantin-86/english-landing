@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  overflow: hidden;
 }
 
 .top-nav {
@@ -18,6 +20,9 @@
 }
 .logo {
   margin-right: 158px;
+  @include tablet {
+    margin-right: 0;
+  }
 }
 .top-nav-list-btn {
 }
@@ -26,10 +31,6 @@
   justify-content: center;
   gap: 17px;
   @include mobile {
-    flex-direction: column;
-    gap: 5px;
-  }
-  @include mobile-s {
     display: none;
   }
 }
@@ -69,20 +70,23 @@
   }
 }
 .burger {
-  width: 30px;
-  height: 30px;
+  position: relative;
+  z-index: 201;
+  width: 50px;
+  height: 50px;
   display: none;
   @include tablet {
-    display: block;
-    padding-block: 31px;
-    margin-left: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   :nth-child(1) {
     display: block;
     width: 100%;
     height: 2px;
     background-color: var(--accent);
-    transform: translateX(10px);
+    transform: translateX(15px);
   }
   :nth-child(2) {
     display: block;
@@ -95,10 +99,27 @@
 .main-nav-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 41px;
   padding-block: 31px;
   @include tablet {
-    display: none;
+    position: absolute;
+    width: 50vw;
+    height: 100dvh;
+    flex-direction: column;
+    padding-top: 100px;
+    background-color: #fff;
+    z-index: 200;
+    top: 0;
+    right: -150%;
+
+    transition: all 0.2s;
+    @include mobile {
+      width: 70vw;
+    }
+    &.active {
+      right: 0;
+    }
   }
 }
 .main-nav-list-link {
