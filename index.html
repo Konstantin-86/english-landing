@@ -28,6 +28,22 @@
         </form>
       </div>
     </div>
+    <button id="scrollToTop">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        shape-rendering="geometricPrecision"
+        text-rendering="geometricPrecision"
+        image-rendering="optimizeQuality"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        viewBox="0 0 463.96 512"
+      >
+        <path
+          fill-rule="nonzero"
+          d="M332.67 512V268.5h92.3c15.48-.68 26.47-5.77 32.82-15.42 17.21-25.8-5.25-52.31-22.6-69.25L261.61 14.33c-17.29-19.11-41.93-19.11-59.22 0L24.42 188.72C8.03 204.78-9.67 229.27 6.21 253.08c6.35 9.65 17.34 14.74 32.81 15.42h92.31V512h201.34z"
+        />
+      </svg>
+    </button>
     <header class="header">
   <nav class="top-nav">
     <div class="container">
@@ -53,6 +69,11 @@
             >+7 (977) 977-56-78</a
           >
         </li>
+        <li class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </li>
       </ul>
     </div>
   </nav>
@@ -60,35 +81,27 @@
     <div class="container">
       <ul class="main-nav-list">
         <li class="main-nav-list-item">
-          <a class="main-nav-list-link" href="#!">Главная</a>
+          <a class="main-nav-list-link" href="#header-content">3-6 ЛЕТ</a>
         </li>
         <li class="main-nav-list-item">
-          <a class="main-nav-list-link" href="#!">3-6 ЛЕТ</a>
+          <a class="main-nav-list-link" href="#secondSection">1-4 КЛАСС</a>
         </li>
         <li class="main-nav-list-item">
-          <a class="main-nav-list-link" href="#!">1-4 КЛАСС</a>
+          <a class="main-nav-list-link" href="#thirdSection">5-11 КЛАСС</a>
         </li>
         <li class="main-nav-list-item">
-          <a class="main-nav-list-link" href="#!">5-11 КЛАСС</a>
+          <a class="main-nav-list-link" href="#resultSection">ВЗРОСЛЫЕ</a>
         </li>
         <li class="main-nav-list-item">
-          <a class="main-nav-list-link" href="#!">ВЗРОСЛЫЕ</a>
+          <a class="main-nav-list-link" href="#age">ДОП. КУРСЫ</a>
         </li>
         <li class="main-nav-list-item">
-          <a class="main-nav-list-link" href="#!">ДОП. КУРСЫ</a>
+          <a class="main-nav-list-link" href="#teamSection">АКЦИИ</a>
         </li>
         <li class="main-nav-list-item">
-          <a class="main-nav-list-link" href="#!">АКЦИИ</a>
-        </li>
-        <li class="main-nav-list-item">
-          <a class="main-nav-list-link" href="#!">О НАС</a>
+          <a class="main-nav-list-link" href="#questionSection">О НАС</a>
         </li>
       </ul>
-      <div class="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </div>
   </nav>
   <div class="inner-main">
@@ -126,7 +139,7 @@
     </div>
   </div>
 </header>
-<section class="header-content">
+<section id="header-content" class="header-content">
   <div class="container">
     <div class="header-content__inner">
       <div class="header-content__item header-content__item--pink">
@@ -189,7 +202,7 @@
   </div>
 </section>
 
- <section>
+ <section id="secondSection">
   <div class="container">
     <div class="second__inner">
       <h2 class="main-title second-title">Какая из этих ситуаций ваша?</h2>
@@ -227,7 +240,7 @@
   </div>
 </section>
 
-    <section>
+    <section id="thirdSection">
   <div class="container">
     <div class="third-section__inner">
       <div class="third-section__textContent">
@@ -269,7 +282,7 @@
   </div>
 </section>
 
-    <section class="resultSection">
+    <section id="resultSection" class="resultSection">
   <div class="container">
     <h2 class="resultSection-title main-title">В результате ваш ребенок:</h2>
     <div class="resultSection__inner">
@@ -337,7 +350,7 @@
     </div>
   </div>
 </section>
- <section class="age">
+ <section id="age" class="age">
   <div class="container">
     <div class="age__inner">
       <h2 class="main-title age-title">Возрастные группы</h2>
@@ -475,6 +488,7 @@
         </div>
       </div>
     </div>
+    <div></div>
   </div>
 </section>
 
@@ -506,7 +520,7 @@
     </div>
   </div>
 </section>
- <section class="teamSection">
+ <section id="teamSection" class="teamSection">
   <div class="container">
     <div class="teamSection__inner">
       <h2 class="main-title teamSection__title">Наша команда</h2>
@@ -667,7 +681,7 @@
   </div>
 </section>
 
-    <section class="questionSection">
+    <section id="questionSection" class="questionSection">
   <div class="container">
     <h2 class="main-title questionSection__title">Вопросы и ответы</h2>
     <div class="question-accordion">
@@ -819,8 +833,65 @@
         </div>
       </div>
     </div>
+    <h2 class="contact main-title">Контакты</h2>
+    <div class="contact-inner">
+      <div class="yand-map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=37.494048%2C55.856390&mode=poi&poi%5Bpoint%5D=37.494348%2C55.856352&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D241179606130&utm_campaign=v1&utm_medium=rating&utm_source=badge&z=17.4"
+          width="100%"
+          height="470"
+          frameborder="1"
+          allowfullscreen="true"
+        ></iframe>
+      </div>
+      <div class="contact-block">
+        <img src="./img/contactImg.png" alt="contactImg" />
+
+        <p>
+          <strong>Адрес</strong> Москва, м. Речной вокзал, ул. Лавочкина, 34.
+        </p>
+
+        <p>
+          <strong>Схема проезда</strong> Вход напротив Дворца спорта «Динамо»
+        </p>
+
+        <p>
+          <strong>Контакты</strong>
+          <a href="tel:74951424259">+7 (495) 142-42-59</a>
+          <br />
+          <a href="emailto:msk-rv@dschool.ru">msk-rv@dschool.ru</a>
+        </p>
+        <strong></strong>
+        <p></p>
+      </div>
+    </div>
   </div>
 </section>
+ <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__logo">
+        <img src="./img/logo.png" alt="logo" />
+      </div>
+      <div class="footer__links">
+        <div class="footer__links-line">
+          <a href="#">Наши преимущества</a>
+          <a href="#">Возрастные группы</a>
+          <a href="#">Особенности занятий</a>
+          <a href="#">Дополнительные ценности</a>
+          <a href="#">Наша команда</a>
+        </div>
+        <div class="footer__links-line">
+          <a href="#">Отзывы</a>
+          <a href="#">Театральный фестиваль</a>
+          <a href="#">Вопрос-ответ</a>
+          <a href="#">Контакты</a>
+          <a href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
     <script src="./js/index.bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
