@@ -17,9 +17,30 @@
         <h3 class="modal-content__title title">Заявка</h3>
         <p class="close-modal">X</p>
         <form id="form" class="modal-form">
-          <input class="input-name" type="text" placeholder="Имя *" />
-          <input class="input-phone" type="tel" placeholder="Телефон *" />
-          <input class="input-email" type="email" placeholder="E-mail *" />
+          <label for="input-name" class="input-name--label"></label>
+          <input
+            class="input-name"
+            name="input-name"
+            type="text"
+            placeholder="Имя *"
+            required
+          />
+          <label for="input-phone" class="input-phone--label"></label>
+          <input
+            class="input-phone"
+            type="tel"
+            name="input-phone"
+            placeholder="Телефон *"
+            required
+          />
+          <label for="input-email" class="input-email--label"></label>
+          <input
+            class="input-email"
+            name="input-email"
+            type="email"
+            required
+            placeholder="E-mail *"
+          />
           <textarea
             class="input-message"
             placeholder="Ваши пожелания"
@@ -27,8 +48,14 @@
           <button class="modal-button">Отправить</button>
         </form>
       </div>
+      <div class="modal-sucsess">
+        <h3 class="modal-content__title title">Ваша заявка принята!</h3>
+        <p class="modal-sucsess__text"></p>
+        <button class="modal-sucsess-closeBtn button">ОК</button>
+      </div>
     </div>
-    <button id="scrollToTop">
+
+    <button class="scrollToTop">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         shape-rendering="geometricPrecision"

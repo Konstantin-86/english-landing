@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.5",
+    "inputmask": "^5.0.9-beta.45",
     "swiper": "^11.0.6"
   }
 }
